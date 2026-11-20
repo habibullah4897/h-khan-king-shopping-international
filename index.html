@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="H Khan King Shopping International — discover products from trusted stores worldwide.">
+<meta name="theme-color" content="#101522">
+<title>H Khan King Shopping International</title>
+<style>
+:root{--bg:#0d1220;--panel:#151d2e;--panel2:#1b263a;--gold:#e8b84d;--text:#f7f8fb;--muted:#aab4c5;--line:#2a3850;--green:#29b779}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:0 18px}
+header{background:#101827;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}.brand{font-weight:800;letter-spacing:.2px;font-size:20px}.brand span{color:var(--gold)}.nav{display:flex;gap:18px;align-items:center;color:var(--muted);font-size:14px}.nav a:hover{color:var(--gold)}
+.hero{padding:54px 0 38px;background:radial-gradient(ellipse at 80% 10%,#35415a 0,transparent 38%),linear-gradient(120deg,#151e30,#0d1220)}.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}.eyebrow{color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(32px,5vw,55px);line-height:1.08;margin:12px 0}.hero p{color:var(--muted);max-width:620px}.hero-card{background:linear-gradient(145deg,#26334a,#141d2e);border:1px solid #3a4963;border-radius:22px;padding:26px;text-align:center}.crown{font-size:64px}.hero-card strong{display:block;font-size:21px;color:var(--gold)}
+.btn{border:0;border-radius:10px;padding:11px 16px;font-weight:700;background:var(--gold);color:#171717;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--text)}.btn.danger{background:#9f3444;color:white}.btn.small{padding:7px 10px;font-size:13px}
+section{padding:34px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:18px}.section-head h2{margin:0;font-size:25px}.muted{color:var(--muted)}.toolbar{display:grid;grid-template-columns:1fr 190px 170px;gap:10px;margin:20px 0}.field{width:100%;background:#101a2a;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px}.categories{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}.chip{border:1px solid var(--line);border-radius:30px;padding:7px 13px;color:var(--muted);background:#111a29}.chip.active,.chip:hover{background:var(--gold);color:#171717;border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product{background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column}.product img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#26334a}.product-body{padding:14px;display:flex;flex-direction:column;gap:7px;flex:1}.tag{font-size:11px;color:var(--gold);text-transform:uppercase;font-weight:700}.product h3{font-size:16px;margin:0}.price{font-size:20px;font-weight:800}.product .muted{font-size:12px}.product-actions{display:flex;gap:8px;margin-top:auto;padding-top:7px}.product-actions .btn{flex:1}.empty{padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px;grid-column:1/-1}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.info{background:var(--panel);border:1px solid var(--line);padding:19px;border-radius:14px}.info b{display:block;color:var(--gold);font-size:17px;margin-bottom:5px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.notice{background:#2a2415;border:1px solid #6c572b;color:#f5d991;border-radius:12px;padding:13px 15px;font-size:13px;margin-top:18px}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:30;overflow:auto;padding:25px}.modal.open{display:block}.modal-box{max-width:720px;margin:35px auto;background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:center}.modal-head h2{margin:0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-grid label{display:block;color:var(--muted);font-size:13px}.form-grid input,.form-grid select,.form-grid textarea{margin-top:5px}.form-grid .full{grid-column:1/-1}.admin-list{display:grid;gap:8px;margin-top:18px}.admin-item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px;background:#101a2a;border-radius:9px}.admin-item span{font-size:13px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:1fr}.hero-card{display:none}.nav{gap:10px}.toolbar{grid-template-columns:1fr 1fr}.toolbar input{grid-column:1/-1}}
+@media(max-width:520px){.top{align-items:flex-start;flex-direction:column}.nav{flex-wrap:wrap}.grid{gap:10px}.product-body{padding:10px}.product-actions{flex-direction:column}.toolbar{grid-template-columns:1fr}.toolbar input{grid-column:auto}.info-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.form-grid .full{grid-column:auto}.hero{padding:38px 0 25px}}
+</style>
+</head>
+<body>
+<header><div class="wrap top">
+  <a class="brand" href="#"><span>👑</span> H KHAN KING <span>SHOPPING</span></a>
+  <nav class="nav"><a href="#home">Home</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a><button class="btn small secondary" onclick="openAdmin()">Admin</button></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+ <div><div class="eyebrow">Worldwide Affiliate Shopping</div><h1>Shop Smart.<br><span style="color:var(--gold)">Live in Style.</span></h1>
+ <p>Discover selected products from trusted shopping platforms around the world. Compare product details and continue securely to the seller's website to complete your purchase.</p>
+ <a class="btn" href="#products">Explore Products →</a></div>
+ <div class="hero-card"><div class="crown">👑</div><strong>H Khan King Shopping International</strong><p class="muted">Your gateway to worldwide deals</p><div>🌍 Worldwide • 🛍️ Easy shopping</div></div>
+</div></section>
+<section id="products"><div class="wrap">
+ <div class="section-head"><div><div class="eyebrow">Find your favourites</div><h2>Featured Products</h2></div><span class="muted" id="count"></span></div>
+ <div class="toolbar"><input id="search" class="field" placeholder="Search products..." oninput="renderProducts()">
+ <select id="country" class="field" onchange="renderProducts()"><option value="">All markets</option><option>USA</option><option>United Kingdom</option><option>Canada</option><option>Australia</option><option>UAE</option><option>Pakistan</option><option>Worldwide</option></select>
+ <select id="sort" class="field" onchange="renderProducts()"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="az">Name: A to Z</option></select></div>
+ <div class="categories" id="categories"></div>
+ <div class="grid" id="productGrid"></div>
+ <div class="notice">Affiliate disclosure: Some product links may be affiliate links. If you buy through an eligible link, this website may earn a commission at no extra cost to you. Prices, availability, delivery and returns are controlled by the seller and may change. Please confirm all details on the seller's website.</div>
+</div></section>
+<section id="about"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Why shop with us</div><h2>Shopping made simple</h2></div></div>
+ <div class="info-grid"><div class="info"><b>🌍 Global selection</b><span class="muted">Explore products and offers from supported markets around the world.</span></div><div class="info"><b>🔗 Trusted sellers</b><span class="muted">Purchases are completed on the seller or marketplace website, not on this demo site.</span></div><div class="info"><b>💡 Clear information</b><span class="muted">Review the product details, currency and seller terms before ordering.</span></div></div>
+</div></section>
+<section id="contact"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Get in touch</div><h2>Contact</h2></div></div><p class="muted">For product questions or website support, contact the store owner.</p><p><b>Email:</b> <a href="mailto:habibullah4897@gmail.com">habibullah4897@gmail.com</a><br><b>WhatsApp:</b> <a href="https://wa.me/923352253097" target="_blank" rel="noopener">+92 335 2253097</a></p><a class="btn secondary" href="mailto:habibullah4897@gmail.com">Email us</a> <a class="btn" href="https://wa.me/923352253097" target="_blank" rel="noopener">WhatsApp: 0335 2253097</a></div></section>
+</main>
+<footer><div class="wrap footer-row"><div><b style="color:var(--text)">H Khan King Shopping International</b><br>© <span id="year"></span> All rights reserved.</div><div><a href="#about">About</a> · <a href="#contact">Contact</a> · <a href="#" onclick="alert('Add your full Privacy Policy before launching affiliate campaigns.');return false">Privacy Policy</a> · <a href="#" onclick="alert('Add your Terms & Conditions before launch.');return false">Terms</a></div></div></footer>
+
+<div class="modal" id="adminModal"><div class="modal-box">
+ <div class="modal-head"><h2>Store Admin</h2><button class="btn small secondary" onclick="closeAdmin()">Close ✕</button></div>
+ <p class="muted">Demo admin panel. Products are saved only in this browser using local storage. It is not secure for a public website. Connect Firebase Authentication and Firestore before publishing admin access.</p>
+ <form id="productForm" onsubmit="saveProduct(event)">
+ <div class="form-grid">
+  <label>Product name<input class="field" name="name" required maxlength="90"></label>
+  <label>Category<select class="field" name="category"><option>Men's Shoes</option><option>Ladies' Shoes</option><option>Fashion</option><option>Electronics</option><option>Watches</option><option>Bags</option><option>Accessories</option><option>Other</option></select></label>
+  <label>Price<input class="field" name="price" type="number" min="0" step="0.01" required></label>
+  <label>Currency<input class="field" name="currency" value="USD" maxlength="5" required></label>
+  <label>Market<select class="field" name="market"><option>Worldwide</option><option>USA</option><option>United Kingdom</option><option>Canada</option><option>Australia</option><option>UAE</option><option>Pakistan</option></select></label>
+  <label>Seller / marketplace<input class="field" name="seller" placeholder="e.g. Amazon" required></label>
+  <label class="full">Image URL<input class="field" name="image" type="url" placeholder="https://..."></label>
+  <label class="full">Affiliate URL<input class="field" name="url" type="url" placeholder="https://... (your approved affiliate link)" required></label>
+  <label class="full">Short description<textarea class="field" name="description" rows="2"></textarea></label>
+ </div><p><button class="btn" type="submit">Add product</button> <button class="btn secondary" type="reset">Clear form</button></p>
+ </form><hr style="border-color:var(--line)"><h3>Manage products</h3><div class="admin-list" id="adminList"></div>
+ <p><button class="btn secondary small" onclick="exportProducts()">Export product data (JSON)</button> <button class="btn danger small" onclick="resetDemo()">Reset demo products</button></p>
+</div></div>
+<script>
+const demoProducts=[
+{id:1,name:"Classic Men's Running Sneakers",category:"Men's Shoes",price:49.99,currency:"USD",market:"USA",seller:"Demo Marketplace",image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",url:"",description:"Demo listing. Replace with a real product and your approved affiliate link."},
+{id:2,name:"Women's Everyday Fashion Sneakers",category:"Ladies' Shoes",price:44.50,currency:"USD",market:"United Kingdom",seller:"Demo Marketplace",image:"https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800",url:"",description:"Demo listing. Add accurate product information and seller link."},
+{id:3,name:"Minimal Style Wrist Watch",category:"Watches",price:69,currency:"USD",market:"Canada",seller:"Demo Marketplace",image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",url:"",description:"Demo listing. Confirm price and availability with the seller."},
+{id:4,name:"Everyday Travel Backpack",category:"Bags",price:39.95,currency:"USD",market:"Australia",seller:"Demo Marketplace",image:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",url:"",description:"Demo listing. Replace this sample with a real affiliate offer."},
+{id:5,name:"Wireless Headphones",category:"Electronics",price:59.99,currency:"USD",market:"Worldwide",seller:"Demo Marketplace",image:"https://images.unsplash.com/photo-1505959892764-4b3b6b4a0f1a?w=800",url:"",description:"Demo listing. This is not a live offer."},
+{id:6,name:"Ladies' Handbag",category:"Ladies' Shoes",price:55,currency:"USD",market:"UAE",seller:"Demo Marketplace",image:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800",url:"",description:"Demo listing. Add a suitable category and correct seller details."}
+];
+let products=loadProducts(),activeCategory="All";
+function loadProducts(){try{return JSON.parse(localStorage.getItem("hkking_products"))||demoProducts}catch(e){return demoProducts}}
+function persist(){localStorage.setItem("hkking_products",JSON.stringify(products))}
+function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function renderCategories(){let cats=["All",...new Set(products.map(p=>p.category))];document.getElementById("categories").innerHTML=cats.map(c=>`<button class="chip ${activeCategory===c?"active":""}" onclick="setCategory('${safe(c).replace(/'/g,"\\'")}')">${safe(c)}</button>`).join("")}
+function setCategory(c){activeCategory=c;renderProducts()}
+function renderProducts(){
+ let q=document.getElementById("search").value.toLowerCase(),market=document.getElementById("country").value,sort=document.getElementById("sort").value;
+ let list=products.filter(p=>(activeCategory==="All"||p.category===activeCategory)&&(!market||p.market===market||p.market==="Worldwide")&&(`${p.name} ${p.category} ${p.seller} ${p.description}`.toLowerCase().includes(q)));
+ if(sort==="low")list.sort((a,b)=>a.price-b.price);if(sort==="high")list.sort((a,b)=>b.price-a.price);if(sort==="az")list.sort((a,b)=>a.name.localeCompare(b.name));
+ document.getElementById("count").textContent=`${list.length} products`;
+ document.getElementById("productGrid").innerHTML=list.length?list.map(p=>`<article class="product"><img src="${safe(p.image||"https://placehold.co/600x450/26334a/ffffff?text=Product")}" alt="${safe(p.name)}" loading="lazy" onerror="this.src='https://placehold.co/600x450/26334a/ffffff?text=Product'"><div class="product-body"><div class="tag">${safe(p.category)} · ${safe(p.market)}</div><h3>${safe(p.name)}</h3><div class="price">${safe(p.currency)} ${Number(p.price).toFixed(2)}</div><div class="muted">${safe(p.seller)}</div><p class="muted">${safe(p.description||"")}</p><div class="product-actions"><a class="btn" href="${p.url?safe(p.url):"#"}" ${p.url?'target="_blank" rel="sponsored nofollow noopener"':'onclick="alert(\\'Demo product: add your approved affiliate URL in Admin before using Buy Now.\\');return false"'}>Buy at seller ↗</a></div></div></article>`).join(""):'<div class="empty">No products found. Try another search or category.</div>';
+ renderCategories();
+}
+function openAdmin(){document.getElementById("adminModal").classList.add("open");renderAdmin()}
+function closeAdmin(){document.getElementById("adminModal").classList.remove("open")}
+function saveProduct(e){e.preventDefault();let f=new FormData(e.target),p={id:Date.now(),name:f.get("name"),category:f.get("category"),price:Number(f.get("price")),currency:f.get("currency").toUpperCase(),market:f.get("market"),seller:f.get("seller"),image:f.get("image"),url:f.get("url"),description:f.get("description")};if(!/^https?:\/\//i.test(p.url)){alert("Please enter a valid affiliate URL beginning with https://");return}if(p.image&&!/^https?:\/\//i.test(p.image)){alert("Please enter a valid image URL.");return}products.unshift(p);persist();e.target.reset();renderProducts();renderAdmin();alert("Product added in this browser.")}
+function renderAdmin(){document.getElementById("adminList").innerHTML=products.map(p=>`<div class="admin-item"><span><b>${safe(p.name)}</b><br>${safe(p.currency)} ${Number(p.price).toFixed(2)} · ${safe(p.market)}</span><button class="btn danger small" onclick="deleteProduct(${p.id})">Delete</button></div>`).join("")||'<p class="muted">No products yet.</p>'}
+function deleteProduct(id){if(confirm("Delete this product?")){products=products.filter(p=>p.id!==id);persist();renderProducts();renderAdmin()}}
+function exportProducts(){let blob=new Blob([JSON.stringify(products,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="h-khan-products.json";a.click();URL.revokeObjectURL(a.href)}
+function resetDemo(){if(confirm("Replace your browser product list with demo products?")){products=[...demoProducts];persist();renderProducts();renderAdmin()}}
+document.getElementById("year").textContent=new Date().getFullYear();renderProducts();
+</script>
+</body></html>
